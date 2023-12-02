@@ -71,6 +71,10 @@
         list-style: none;
         gap: 1rem;
     }
+
+    body {
+        background-color: cyan;
+    }
 </style>
 
 
@@ -80,8 +84,7 @@
             aria-label="slide précedant"> &lt; </button>
         <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
             aria-label="slide suivant">></button>
-        <div class="carrousel_parent-ecrans" x-ref="parent">
-            @scroll.debounce.250ms.passive="
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="
             hrefCourant = '#'+
             [...$refs.parent.children]
             .find(e=>e.getBoundingClientRect().x>=0)
