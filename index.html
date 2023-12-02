@@ -79,6 +79,7 @@
 
 
 <body>
+    <h1>Carrousel des stades de foot !</h1>
     <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
         <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
             aria-label="slide précedant"> &lt; </button>
@@ -126,12 +127,12 @@
             </div>
         </div>
         <ul class="caroussel_liste-liens">
-            <li><a href="#ecran-1" class="caroussel_lien" : class="{actif:hrefCourant==='#ecran-1'}">Groupama Stadium
+            <li><a href="#ecran-1" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-1'}"> Groupama Stadium
                 </a>
             </li>
-            <li><a href="#ecran-2" class="caroussel_lien">Satde Bonal</a></li>
+            <li><a href="#ecran-2" class="caroussel_lien">Stade Bonal</a></li>
             <li><a href="#ecran-3" class="caroussel_lien">Interieur OL</a></li>
-            <li><a href="#ecran-4" class="caroussel_lien">Caamp Nou</a></li>
+            <li><a href="#ecran-4" class="caroussel_lien">Camp Nou</a></li>
             <li><a href="#ecran-5" class="caroussel_lien">Estadio Santiago Bernabeu</a></li>
         </ul>
     </div>
